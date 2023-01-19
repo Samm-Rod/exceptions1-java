@@ -10,7 +10,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
+        System.out.println("Dates Reservation ");
         System.out.print("Room number: ");
         int number = sc.nextInt();
         System.out.print("Check-in date (dd/MM/yyyy): ");
@@ -19,7 +19,7 @@ public class Main {
         Date checkOut = sdf.parse(sc.next());
 
         if(!checkOut.after(checkIn)){
-            System.out.println("Error in reservation: Check-out date must be after check-in date");
+            System.out.println("Error in reservation: Check-out date must be after check-in date ");
         }else{
             Resevation resevation = new Resevation(number,checkIn,checkOut);
             System.out.println("Reservation: "+ resevation);
@@ -37,7 +37,6 @@ public class Main {
             }else{
                 System.out.println("Reservation: " + resevation);
             }
-
         }
 
     }
